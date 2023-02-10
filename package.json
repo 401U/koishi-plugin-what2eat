@@ -1,0 +1,53 @@
+{
+  "name": "koishi-plugin-what2eat",
+  "description": "koishi plugin that select food/drink for you",
+  "private": false,
+  "version": "0.0.1",
+  "author": "YehowahLiu <yewhoahliu@4o1.to>",
+  "maintainers": [
+    "YehowahLiu <yewhoahliu@4o1.to>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YehowahLiu/koishi-plugin-what2eat"
+  },
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "atsc -b"
+  },
+  "keywords": [
+    "chatbot",
+    "koishi",
+    "plugin"
+  ],
+  "peerDependencies": {
+    "koishi": "^4.11.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "koishi": {
+    "description": {
+      "zh": "今天吃什么？",
+      "en": "What do you want to eat today?"
+    },
+    "locales": [
+      "en",
+      "zh"
+    ]
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.35.2",
+    "@koishijs/plugin-mock": "^2.3.2",
+    "atsc": "^1.2.2",
+    "eslint": "^8.33.0",
+    "koishi": "^4.11.5",
+    "typescript": "^4.9.5"
+  }
+}
