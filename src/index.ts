@@ -60,39 +60,6 @@ export function apply(ctx: Context) {
     }
     logger.info('初始化数据库表中')
     // TODO: setup database table for what2eat
-    // const testdata: Array<Eatable> = [
-    //   {
-    //     id: 1,
-    //     type: 'food',
-    //     name: 'banana',
-    //     weight: 100,
-    //     specific: '',
-    //   },
-    //   {
-    //     id: 2,
-    //     type: 'food',
-    //     name: 'apple',
-    //     weight: 100,
-    //     specific: '',
-    //   },
-    //   {
-    //     id: 3,
-    //     type: 'drink',
-    //     name: 'orange',
-    //     weight: 100,
-    //     specific: '',
-    //   },
-    //   {
-    //     id: 4,
-    //     type: 'drink',
-    //     name: 'water',
-    //     weight: 100,
-    //     specific: '',
-    //   },
-    // ]
-    // testdata.forEach(async (row) => {
-    //   return await ctx.database?.create('what2eat', row)
-    // })
     await ctx.database.upsert('what2eat', [
       { id: 1, type: 'food', name: 'banana', weight: 100, specific: '' },
       { id: 2, type: 'food', name: 'apple', weight: 100, specific: '' },
