@@ -58,7 +58,7 @@
     "chai": "^4.3.7",
     "esbuild": "^0.17.7",
     "esbuild-register": "^3.4.2",
-    "eslint": "^8.33.0",
+    "eslint": "^8.34.0",
     "koishi": "^4.11.5",
     "mocha": "^10.2.0",
     "shx": "^0.3.4",
