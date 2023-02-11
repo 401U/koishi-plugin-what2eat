@@ -19,7 +19,11 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "atsc -b"
+    "build": "atsc -b",
+    "test": "mocha --exit -r esbuild-register -r yml-register tests/*.spec.ts",
+    "test:text": "shx rm -rf coverage && c8 -r text pnpm test",
+    "test:json": "shx rm -rf coverage && c8 -r json pnpm test",
+    "test:html": "shx rm -rf coverage && c8 -r html pnpm test"
   },
   "keywords": [
     "chatbot",
@@ -45,9 +49,18 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.35.2",
     "@koishijs/plugin-mock": "^2.3.2",
+    "@types/chai": "^4.3.4",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^18.13.0",
     "atsc": "^1.2.2",
+    "c8": "^7.12.0",
+    "chai": "^4.3.7",
+    "esbuild-register": "^3.4.2",
     "eslint": "^8.33.0",
     "koishi": "^4.11.5",
-    "typescript": "^4.9.5"
+    "mocha": "^10.2.0",
+    "shx": "^0.3.4",
+    "typescript": "^4.9.5",
+    "yml-register": "^1.1.0"
   }
 }
