@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@antfu/eslint-config': ^0.35.2
+  '@koishijs/plugin-database-memory': ^2.3.0
   '@koishijs/plugin-mock': ^2.3.2
   '@types/chai': ^4.3.4
   '@types/mocha': ^10.0.1
@@ -20,6 +21,7 @@ specifiers:
 
 devDependencies:
   '@antfu/eslint-config': 0.35.2_4vsywjlpuriuw3tl5oq6zy5a64
+  '@koishijs/plugin-database-memory': 2.3.0_koishi@4.11.5
   '@koishijs/plugin-mock': 2.3.2_koishi@4.11.5
   '@types/chai': 4.3.4
   '@types/mocha': 10.0.1
@@ -464,6 +466,17 @@ packages:
       ns-require: 1.1.4
     dev: true
 
+  /@koishijs/plugin-database-memory/2.3.0_koishi@4.11.5:
+    resolution: {integrity: sha512-EjEwGeibskHw/sDAsMOc0HjYqL44NFQfd/EvFLBtUXRwnHwOaVnR6AEJVj4BGT27u2kOGoGn1GOcPipaL8Rf5A==}
+    peerDependencies:
+      koishi: ^4.11.5
+    dependencies:
+      '@minatojs/driver-memory': 2.3.0
+      koishi: 4.11.5
+    transitivePeerDependencies:
+      - '@minatojs/core'
+    dev: true
+
   /@koishijs/plugin-mock/2.3.2_koishi@4.11.5:
     resolution: {integrity: sha512-MBr1G96TqfxhGBu954KlLingDixFtx1k+ftM/VTlIl9ox3r4RrVMDg9q0qb1pnrrSNUAqpLFGjQZeXXK9D5MhA==}
     peerDependencies:
@@ -481,6 +494,14 @@ packages:
 
   /@minatojs/core/2.2.0:
     resolution: {integrity: sha512-7fax/CXuml8MIBSkxo0LRAutZgsfBsaaZ8zobUijRREvxMRv+FZ814gGxsTFPUxyjG+6Y2Wj2avS+tj+8LcnKA==}
+    dependencies:
+      cosmokit: 1.4.0
+    dev: true
+
+  /@minatojs/driver-memory/2.3.0:
+    resolution: {integrity: sha512-bk0Ot5pypD6QGC1Z4m5VcRzBLtQNq8UYqGfr9H/ollxIdrl6NLG7sCIL2pEfQOk2y7Qy7b7BthmYP7izKGn8rw==}
+    peerDependencies:
+      '@minatojs/core': ^2.2.0
     dependencies:
       cosmokit: 1.4.0
     dev: true
