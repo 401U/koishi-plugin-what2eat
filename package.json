@@ -3,13 +3,13 @@
   "description": "koishi plugin that select food/drink for you",
   "private": false,
   "version": "0.0.1",
-  "author": "YehowahLiu <yewhoahliu@4o1.to>",
+  "author": "401Unauthorized <hi@4o1.to>",
   "maintainers": [
-    "YehowahLiu <yewhoahliu@4o1.to>"
+    "401Unauthorized <hi@4o1.to>"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/YehowahLiu/koishi-plugin-what2eat"
+    "url": "https://github.com/401U/koishi-plugin-what2eat"
   },
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -31,7 +31,7 @@
     "plugin"
   ],
   "peerDependencies": {
-    "koishi": "^4.11.5"
+    "koishi": "^4.11.6"
   },
   "publishConfig": {
     "access": "public"
@@ -59,7 +59,7 @@
     "esbuild": "^0.17.7",
     "esbuild-register": "^3.4.2",
     "eslint": "^8.34.0",
-    "koishi": "^4.11.5",
+    "koishi": "^4.11.6",
     "mocha": "^10.2.0",
     "shx": "^0.3.4",
     "typescript": "^4.9.5",
