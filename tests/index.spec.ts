@@ -15,10 +15,12 @@ before(() => {
 })
 after(() => app.stop())
 
-it('should recommand food to me', async () => {
-  await clientA.shouldReply('今天吃什么', 'apple')
-})
+describe('mock test for plugin', () => {
+  it('should recommand food to me', async () => {
+    await clientA.shouldReply('今天吃什么', 'apple')
+  })
 
-it('should recommand drink to me', async () => {
-  await clientA.shouldReply('今天喝什么', 'orange')
+  it('should recommand drink to me', async () => {
+    await clientA.shouldReply('今天喝什么', 'cola')
+  })
 })
