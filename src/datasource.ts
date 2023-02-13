@@ -1,5 +1,5 @@
 import type { Context } from 'koishi'
-import { $ } from 'koishi'
+import { $, Random } from 'koishi'
 
 export class DataSource {
   private readonly ctx: Context
@@ -44,24 +44,18 @@ export class DataSource {
     }
   }
 
-  async totalWight(type: 'food' | 'drink' | null = null) {
-    switch (type) {
-      case 'food':
-        return await this.ctx.database?.eval('what2eat', row => $.sum(row.weight), { type: 'food' })
-      case 'drink':
-        return await this.ctx.database?.eval('what2eat', row => $.sum(row.weight), { type: 'drink' })
-      default:
-        return await this.ctx.database?.eval('what2eat', row => $.sum(row.weight))
-    }
-  }
-
   async getRandom(type: 'food' | 'drink' = 'food', guild = ''): Promise<string> {
-    switch (type) {
-      case 'food':
-        return 'apple'
-      case 'drink':
-      default:
-        return 'cola'
+    const rows = await this.ctx.database?.get('what2eat', {
+      type: [type],
+    })
+    const totalWeight = rows.reduce((total, row) => total + row.weight, 0)
+    const selectedWeight = Random.int(1, totalWeight)
+    let w = selectedWeight
+    for (const row of rows) {
+      w = w - row.weight
+      if (w <= 0)
+        return row.name
     }
+    return '菜单丢掉了T_T'
   }
 }
