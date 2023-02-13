@@ -1,6 +1,7 @@
 # koishi-plugin-what2eat
 
 [![npm](https://img.shields.io/npm/v/koishi-plugin-what2eat?style=flat-square)](https://www.npmjs.com/package/koishi-plugin-what2eat)
+[![codecov](https://codecov.io/gh/401U/koishi-plugin-what2eat/branch/master/graph/badge.svg?token=N7Y36HEITL)](https://codecov.io/gh/401U/koishi-plugin-what2eat)
 
 今天吃什么？
 
