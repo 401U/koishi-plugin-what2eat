@@ -31,6 +31,7 @@ export function apply(ctx: Context) {
 
   // 在插件加载时，检查是否要生成数据库内容
   ctx.on('ready', async () => {
+    logger.info('plugin ready')
     if (!(await datasource.isInited())) {
       logger.info('初始化数据库表中')
       await datasource.init()
